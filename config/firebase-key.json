@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "registro-conferencias",
+  "private_key_id": "7bddf528e6501e1f3d4749cd2fa8fdf2fdf4e954",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDT1JuhFus14Jyh\n6zPLa/jN0c63BQUzDd2nsHKWZ9TEW42pj1sTAtAwrStlozNMIcNkyB51Nl2GFFpb\n0BqckpcNTuf8xajvgaCoERmNDFeI/G1a+7qSuZN1XpM+ZlTXwn5E0eLXYnk73dTJ\nmEOACd5AYnJ9dxOgOtOTNKMJzOLWGbuNmxzadD2kiU/2WQu3oME3pKegiwQpknmZ\nDrby56Gdbfl4Nn26qBpe4UObPn8LK//bZ3r9qk5LD++/WnIObuDBtGYurBtTbyou\nVhzAoqQ6s2URLhS/FVMBOcroomRWSKFOqXSBeysvSCs/UCsHNXq4MSCgdhVWFQ7d\nHYl6ZsGVAgMBAAECggEACgCLeq9A2vHoo3KeJvhJrro95wFrLe51LWJU/soXT1A9\nX6i/taWX2/yJRIrQtMMRXVRfr8wp3Vdfrt8kKol3bW7w4Ewa/ngh9F2eVb0j8vls\nVnP1atEtZ8jX7gXZ8rghyzEX43CoZc3DKuOwKD8PCf48BrWVLScp71T4b9GHUnGd\nnTyh1o1Ib0NiJKchHy/D9rroFfsj6pLGb6GcCTgIRu0A9d6a8Vm0SBUmIqca8Z8V\nKPzy//agyJwWtLet1J2gZBaBq7V3Sl/kqxK7O52i1WLCmdGP3IKczRqDzgQ4gZyg\nzkudlTVzRe4gFnYq8Ekm2kw8dC/hpE/yFu0AMd8jLwKBgQDtLfR8BUm/bR0Dx4Ux\ntmPaz7yFcBw78BPA7iXnzEGpi2kiZFVVerHcwWa38GjSZ1mXhVqJhjB+wYTByvdK\np+/gtEgW0rBjS8FqiPz4Koh6efTYTGQuV4TUGq28BeaKn8KeGLcZjkGBrGbbGdkM\n7UPOxypsamyvcmuBruYHk8jJ1wKBgQDko7cVtheCGdJZf8D3jcJ+C60qBCelIWfO\nGgzIIiJPBTbbuIsDG+Fsf3RSrz2dBu1aeTNfAUoD4lIc4zCFUB8ziFK5z8pUpWy4\nqIAKdQWmoM3F2BeQ8O97fan4wOVrSSWPJoZIL31LFnln7Fy8XNzv3WmVcV2rh57t\n27BSIuXacwKBgQDitMFzZk6WtkI8oZLT8MXDmjtVxNKIDDOlfz0mMpw05jfJEuRq\nP0wReZ+ohBh9vSHq7iGbQHPMRUeTQWFcr+de/pPFlP/a+cdYALbksyse/sGlmmdL\n0IX7g8C671zs9kY9fdxOhiZhP5xVI4DPlV7yIHeRh6x5i0HthHMFnSIYowKBgQDQ\nsc7v9mHG0yL5pm7Qh4i73JSXAWvegntp2MVJ+D4wuqW0MOJSWCSPEFdxEZu/tQ75\nwh9t3JNesDobPBSR2uxf8VLxYAVi9gwjEUquQNqDmcu5huEb34/4vF9lO00tfHrY\nC2YOhapr23u9rDWJiYnxN7ykN/I0G3qpyhlLH6eGmQKBgQCN65Qs1SppaGejVdhq\nlDcRYBXe2b8c+LHPD8XH7q1ttYcO8i/x//OKQVJVNqp0ZChlpgoRcIb5E5GBqwbG\nyrr816uwaGF75Cznmm9d6Zt1PgWzZjIpbPueS3pAlnA4sbcXY2P8sG+Ojdbmg29e\nUEqWKJhjmRMMb/qyJRi0j5BY/Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-umd6t@registro-conferencias.iam.gserviceaccount.com",
+  "client_id": "112100961416257161473",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-umd6t%40registro-conferencias.iam.gserviceaccount.com"
+}

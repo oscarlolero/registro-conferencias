@@ -1,0 +1,9 @@
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.box-item {
+    margin: 10px;
+    width: 250px;
+}
