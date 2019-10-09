@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/1efaceac26.js" crossorigin="anonymous"></script>
+    <title>Conferencias</title>
+    <style>
+        .icon:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5 col-3">
+    <div class="row mb-2">
+        <a href="/"><i class="fas fa-arrow-left"></i></a>
+    </div>
+    <div class="row">
+        <h6>Día 1</h6>
+    </div>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="col-8">Conferencia <i class="fas fa-plus-circle icon" onclick="addConference(1)"></i></th>
+                <th class="col-4">Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(let i = 0; i < data.day1.length; i++) { %>
+                <tr>
+                    <td><%= data.day1[i][0] %></td>
+                    <td>
+                        <i class="far fa-edit icon" onclick="editConference(this)"></i>
+                        <i class="far fa-times-circle icon" style="margin-left: 15px" onclick="deleteConference(this)"></i>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <h6>Día 1</h6>
+    </div>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="col-8">Conferencia <i class="fas fa-plus-circle icon" onclick="addConference(2)"></i></th>
+                <th class="col-4">Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(let i = 0; i < data.day2.length; i++) { %>
+                <tr>
+                    <td><%= data.day2[i][0] %></td>
+                    <td>
+                        <i class="far fa-edit icon" onclick="editConference(this)"></i>
+                        <i class="far fa-times-circle icon" style="margin-left: 15px" onclick="deleteConference(this)"></i>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    axios = window.axios;
+    const deleteConference = async (element) => {
+        const response = await axios.post(`${window.origin}/edit-conference`, {
+           type: 'delete',
+           conference: element.closest('tr').firstElementChild.innerHTML
+        });
+        element.closest('tr').remove();
+    }
+    const addConference = async (day) => {
+        const input = prompt('Escriba el nombre de la conferencia:');
+        if (input != null && input !== "") {
+            await axios.post(`${window.origin}/edit-conference`, {
+                type: 'add',
+                conference: input,
+                day
+            });
+            location.reload();
+        }
+    }
+    const editConference = async (element) => {
+        const input = prompt('Escriba el nuevo nombre de la conferencia:', element.closest('tr').firstElementChild.innerHTML);
+        if (input != null && input !== "") {
+            await axios.post(`${window.origin}/edit-conference`, {
+                type: 'edit',
+                old_name: element.closest('tr').firstElementChild.innerHTML,
+                new_name: input
+            });
+            location.reload();
+        }
+    }
+</script>
+</body>
+</html>

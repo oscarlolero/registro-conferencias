@@ -32,17 +32,17 @@
             <% } %>
             <div class="row">
                 <div class="col">
-                    <form action="/participantes" method="post">
+                    <form action="/registrar-participantes" method="post">
                         <div class="form-group">
                             <label>Completa los siguientes campos:</label>
                             <div class="form-group mt-2">
-                                <input type="text" name="name" class="form-control" placeholder="Nombre completo">
+                                <input type="text" name="name" class="form-control" placeholder="Nombre completo" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="email" class="form-control" placeholder="Correo">
+                                <input type="email" name="email" class="form-control" placeholder="Correo" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="age" class="form-control" placeholder="Edad">
+                                <input type="number" name="age" class="form-control" placeholder="Edad" required>
                             </div>
                             <label>Día 1</label>
                             <div class="form-group">
