@@ -1,5 +1,6 @@
 const admin = require("firebase-admin");
 const serviceAccount = require("../config/firebase-key");
+//LLAVE EXPUESTA EN GITHUB DEBIDO A QUE NO ES UN PROYECTO PRIVADO
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     databaseURL: "https://registro-conferencias.firebaseio.com"
@@ -7,7 +8,18 @@ admin.initializeApp({
 const db = admin.firestore();
 
 module.exports = (app) => {
-    app.get('/', (req, res) => {
+    app.post('/login', (req, res) => {
+        console.log(req.body)
+        if(req.body.name === 'admin' && req.body.password === '1234') {
+            res.redirect('admin');
+        } else {
+            res.render('login', {
+                error: 1
+            });
+        }
+
+    });
+    app.get('/admin', (req, res) => {
         res.render('landing');
     });
     app.get('/conferencias', async (req, res) => {
@@ -34,6 +46,14 @@ module.exports = (app) => {
         res.render('participantes', {
             data
         });
+    });
+    app.get('/login', async (req, res) => {
+        res.render('login', {
+            error: 0
+        });
+    });
+    app.get('/participante', async (req, res) => {
+        res.render('landing2');
     });
     app.get('/registrar-participantes', async (req, res) => {
         const dia1 = await db.collection('conferencias').where('day', '==', '1').get();
