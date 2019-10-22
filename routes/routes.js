@@ -1,3 +1,4 @@
+//DO NOT USE THESE ROUTES FOR PRODUCTION. HIGH VULNERABILITY
 const admin = require("firebase-admin");
 const serviceAccount = require("../config/firebase-key");
 //LLAVE EXPUESTA EN GITHUB DEBIDO A QUE NO ES UN PROYECTO PRIVADO
